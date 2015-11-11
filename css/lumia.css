@@ -1,0 +1,180 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+footer {
+	text-align: center;
+	font-size: 0.8em;
+	font-family: Open Sans, sans-serif;
+	margin-top: 4em;
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?hpznqp');
+	src:url('fonts/icomoon.eot?hpznqp#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?hpznqp') format('truetype'),
+		url('fonts/icomoon.woff?hpznqp') format('woff'),
+		url('fonts/icomoon.svg?hpznqp#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-forward:before {
+	content: "\e900";
+}
+.icon-search:before {
+	content: "\e901";
+}
+.icon-windows-logo:before {
+	content: "\e902";
+}
+
+
+.-shadowed {
+	-webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.70);
+	-moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.70);
+	box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.70);
+}
+
+.-bordered {
+	border: 1px solid #ccc;
+}
+
+.-centered {
+	margin: 0 auto;
+	top: 20px;
+}
+
+.main-body {
+	width: 40%;
+	background-color: #eee;
+	border-radius: 2.5%;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.button {
+	width: 1%;
+	background-color: #eee;
+	position: absolute;
+}
+
+.main-body > .button-volume {
+	left: 100%;
+	top: 20%;
+	height: 12%;
+}
+
+.main-body > .button-power {
+	left: 100%;
+	top: 44%;
+	height: 6%;
+}
+
+.main-body > .button-camera {
+	left: 100%;
+	top: 76%;
+	height: 6%;
+}
+
+.main-body > .inner-black-body {
+	background-color: #2d2d2d;
+	width: 96%;
+	height: 98%;
+	border-radius: 7%/3.5%;
+	position: absolute;
+	top: 1%;
+	left: 2%;
+	margin: 0;
+	padding: 0;
+}
+
+.main-body > .inner-black-body > .top-speaker {
+	width: 30%;
+	height: 1%;
+	position: absolute;
+	left: 35%;
+	top: 3.5%;
+	background-color: #424242;
+	border-radius: 2px;
+}
+
+.main-body > .inner-black-body > .top-camera {
+	position: absolute;
+	left: 71%;
+	top: 3%;
+	width: 4%;
+	height: 2%;
+	border-radius: 50%;
+	background-color: #656565;
+}
+
+.main-body > .inner-black-body > .top-camera > .camera-lens {
+	background-color: #2d2d2d;
+	border-radius: 50%;
+	width: 30%;
+	height: 30%;
+	position: absolute;
+	top: 35%;
+	left: 35%;
+}
+
+.main-body > .inner-black-body > .nokia-logo {
+	width: 16%;
+	height: auto;
+	position: absolute;
+	right: 4%;
+	top: 3.5%;
+}
+
+.main-body > .inner-black-body > .main-screen {
+	background-color: #ccc;
+	position: absolute;
+	top: 8%;
+	left: 3.5%;
+	width: 93%;
+	height: 82%;
+}
+
+.main-body > .inner-black-body > .nav-back {
+	left: 14%;
+}
+
+.main-body > .inner-black-body > .nav-logo {
+	left: 47%;
+}
+
+.main-body > .inner-black-body > .nav-search {
+	left: 80%;
+}
+
+.nav-icon {
+	color: #fff;
+	font-size: 1em;
+	display: inline-block;
+	position: absolute;
+	bottom: 4%;
+}
+
+.-flipped {
+	-moz-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
