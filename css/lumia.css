@@ -150,6 +150,7 @@ footer {
 	left: 3.5%;
 	width: 93%;
 	height: 82%;
+	overflow: hidden;
 }
 
 .main-body > .inner-black-body > .nav-back {
@@ -177,4 +178,35 @@ footer {
 	-webkit-transform: scaleX(-1);
 	-o-transform: scaleX(-1);
 	transform: scaleX(-1);
+}
+
+/** Content **/
+.main-body > .inner-black-body > .main-screen > .lumia-screensaver {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/screensaver.jpg');
+	background-size: cover;
+	cursor: pointer;
+}
+
+.screensaver-info {
+	position: absolute;
+}
+
+.screensaver-info > p {
+	color: #FFF;
+	padding: 0px;
+	margin: 1% 0px;
+	text-align: left;
+}
+
+#screensaver-time {	
+	font-size: 4em;
+}
+
+#screensaver-day, #screensaver-date {
+	font-size: 1.2em;
 }

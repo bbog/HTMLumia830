@@ -13,6 +13,7 @@
 	-->
 
 	<script src="js/lib/jsratio.min.js"></script>
+	<script src="js/lumia.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -28,6 +29,15 @@
 			</div>
 			<img class="nokia-logo" src="svg/nokia.svg"/>
 			<div class="main-screen">
+
+				<div class="lumia-screensaver">
+					<div id="screensaver-info" class="screensaver-info">
+						<p id="screensaver-time"></p>
+						<p id="screensaver-day" ></p>
+						<p id="screensaver-date"></p>
+					</div>
+				</div>
+
 			</div>
 
 			<span class="nav-back nav-icon icon-forward -flipped"></span>
@@ -42,6 +52,7 @@
 	
 	<script>
 		JSRatio.init();
+		Lumia.init();
 	</script>
 
 	<br style="clear: both;"/>
