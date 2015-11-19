@@ -1,3 +1,7 @@
+
+
+
+/** Site styles **/
 html, body {
 	width: 100%;
 	height: 100%;
@@ -10,6 +14,9 @@ footer {
 	margin-top: 4em;
 }
 
+
+
+/** Font icon related **/
 @font-face {
 	font-family: 'icomoon';
 	src:url('fonts/icomoon.eot?hpznqp');
@@ -46,6 +53,8 @@ footer {
 }
 
 
+
+/** General lumia styles **/
 .-shadowed {
 	-webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.70);
 	-moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.70);
@@ -56,12 +65,10 @@ footer {
 	border: 1px solid #ccc;
 }
 
-.-centered {
-	margin: 0 auto;
-	top: 20px;
-}
 
-.main-body {
+
+/** Lumia main styles **/
+.lumia {
 	height: 90%;
 	background-color: #eee;
 	border-radius: 2.5%;
@@ -69,31 +76,12 @@ footer {
 	font-family: 'Open Sans', sans-serif;
 }
 
-.button {
-	width: 1%;
-	background-color: #eee;
-	position: absolute;
+.lumia--centered {
+	margin: 0 auto;
+	top: 20px;
 }
 
-.main-body > .button-volume {
-	left: 100%;
-	top: 20%;
-	height: 12%;
-}
-
-.main-body > .button-power {
-	left: 100%;
-	top: 44%;
-	height: 6%;
-}
-
-.main-body > .button-camera {
-	left: 100%;
-	top: 76%;
-	height: 6%;
-}
-
-.main-body > .inner-black-body {
+.lumia__black__body {
 	background-color: #2d2d2d;
 	width: 96%;
 	height: 98%;
@@ -105,7 +93,35 @@ footer {
 	padding: 0;
 }
 
-.main-body > .inner-black-body > .top-speaker {
+
+/** Side buttons **/
+.lumia__button {
+	width: 1%;
+	background-color: #eee;
+	position: absolute;
+}
+
+.lumia__button--volume {
+	left: 100%;
+	top: 20%;
+	height: 12%;
+}
+
+.lumia__button--power {
+	left: 100%;
+	top: 44%;
+	height: 6%;
+}
+
+.lumia__button--camera {
+	left: 100%;
+	top: 76%;
+	height: 6%;
+}
+
+
+/** Top body components **/
+.lumia__top__speaker {
 	width: 30%;
 	height: 1%;
 	position: absolute;
@@ -115,7 +131,7 @@ footer {
 	border-radius: 2px;
 }
 
-.main-body > .inner-black-body > .top-camera {
+.lumia__top__camera {
 	position: absolute;
 	left: 71%;
 	top: 3%;
@@ -125,7 +141,7 @@ footer {
 	background-color: #656565;
 }
 
-.main-body > .inner-black-body > .top-camera > .camera-lens {
+.lumia__top__camera__lens {
 	background-color: #2d2d2d;
 	border-radius: 50%;
 	width: 30%;
@@ -135,7 +151,7 @@ footer {
 	left: 35%;
 }
 
-.main-body > .inner-black-body > .nokia-logo {
+.lumia__nokia__logo {
 	width: 16%;
 	height: auto;
 	position: absolute;
@@ -143,7 +159,38 @@ footer {
 	top: 3.5%;
 }
 
-.main-body > .inner-black-body > .main-screen {
+
+/** Bottom body components **/
+.lumia__nav__icon {
+	color: #fff;
+	font-size: 1em;
+	display: inline-block;
+	position: absolute;
+	bottom: 4%;
+}
+
+.lumia__nav__icon--flipped {
+	-moz-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+
+.lumia__nav__icon--back {
+	left: 14%;
+}
+
+.lumia__nav__icon--logo {
+	left: 47%;
+}
+
+.lumia__nav__icon--search {
+	left: 80%;
+}
+
+
+/** Main screen **/
+.lumia__main__screen {
 	background-color: #ccc;
 	position: absolute;
 	top: 8%;
@@ -153,35 +200,9 @@ footer {
 	overflow: hidden;
 }
 
-.main-body > .inner-black-body > .nav-back {
-	left: 14%;
-}
 
-.main-body > .inner-black-body > .nav-logo {
-	left: 47%;
-}
-
-.main-body > .inner-black-body > .nav-search {
-	left: 80%;
-}
-
-.nav-icon {
-	color: #fff;
-	font-size: 1em;
-	display: inline-block;
-	position: absolute;
-	bottom: 4%;
-}
-
-.-flipped {
-	-moz-transform: scaleX(-1);
-	-webkit-transform: scaleX(-1);
-	-o-transform: scaleX(-1);
-	transform: scaleX(-1);
-}
-
-/** Content **/
-.main-body > .inner-black-body > .main-screen > .lumia-screensaver {
+/** Screensaver **/
+.lumia__screensaver {
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -192,11 +213,11 @@ footer {
 	cursor: pointer;
 }
 
-.screensaver-info {
+.lumia__screensaver__wrapper {
 	position: absolute;
 }
 
-.screensaver-info > p {
+.lumia__screensaver__info {
 	color: #FFF;
 	padding: 0px;
 	margin: 1% 0px;
@@ -204,10 +225,10 @@ footer {
 	line-height: 110%;
 }
 
-#screensaver-time {	
+.lumia__screensaver__info--time {	
 	font-size: 4em;
 }
 
-#screensaver-day, #screensaver-date {
+.lumia__screensaver__info--day, .lumia__screensaver__info--date {
 	font-size: 1.2em;
 }

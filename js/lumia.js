@@ -12,10 +12,11 @@ var Lumia = (function () {
 		screensaverTimeInterval = setInterval(function () {
 			initScreensaver();
 		}, 60000);
+
 	};
 
 
-	
+	/** Screensaver **/	
 	function initScreensaver () {
 
 		initTime();
@@ -83,7 +84,7 @@ var Lumia = (function () {
 
 	function randomizeScreensaverPosition () {
 		
-		var screensaverInfo = document.getElementById('screensaver-info');
+		var screensaverInfo = document.getElementById('screensaver-info-wrapper');
 		if (screensaverInfo) {
 			
 			var randomLeft = getRandomInt(1, 25),
