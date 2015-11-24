@@ -24,6 +24,8 @@ var Lumia = (function () {
 		initDate();
 
 		randomizeScreensaverPosition();
+
+		bindScreensaverEvents();
 	};
 
 
@@ -93,6 +95,20 @@ var Lumia = (function () {
 			screensaverInfo.style.left = randomLeft + '%';
 			screensaverInfo.style.top  = randomTop + '%';
 		}
+	};
+
+
+	function bindScreensaverEvents () {
+
+		var screensaver = document.getElementById('screensaver');
+
+		Swiper({
+			target: screensaver,
+			direction: 'up',
+			callback: function (eventData) {
+				console.log('swiped')
+			}
+		});
 	};
 
 
