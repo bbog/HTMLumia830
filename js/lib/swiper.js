@@ -108,8 +108,8 @@
 				swipeData.previousX = swipeData.currentEvent.pageX;
 				swipeData.previousY = swipeData.currentEvent.pageY;
 
-				totalDistanceX = swipeData.currentX - swipeData.initialX;
-				totalDistanceY = swipeData.currentY - swipeData.initialY;
+				swipeData.totalDistanceX = swipeData.currentX - swipeData.initialX;
+				swipeData.totalDistanceY = swipeData.currentY - swipeData.initialY;
 			}
 		};
 
@@ -125,12 +125,12 @@
 
 			if (isDragged && swipeData.dragDuration < DRAG_MINIMUM_DURATION) {
 
-				var movedMoreHorizontally = Math.abs(totalDistanceX) > Math.abs(totalDistanceY),
-					movedMoreVertically   = Math.abs(totalDistanceY) > Math.abs(totalDistanceX),
-					movedTowardsTop    = totalDistanceY < 0,
-					movedTowardsBottom = totalDistanceY > 0,
-					movedTowardsLeft   = totalDistanceX < 0,
-					movedTowardsRight  = totalDistanceX > 0;
+				var movedMoreHorizontally = Math.abs(swipeData.totalDistanceX) > Math.abs(swipeData.totalDistanceY),
+					movedMoreVertically   = Math.abs(swipeData.totalDistanceY) > Math.abs(swipeData.totalDistanceX),
+					movedTowardsTop    = swipeData.totalDistanceY < 0,
+					movedTowardsBottom = swipeData.totalDistanceY > 0,
+					movedTowardsLeft   = swipeData.totalDistanceX < 0,
+					movedTowardsRight  = swipeData.totalDistanceX > 0;
 
 
 				switch (direction) {
