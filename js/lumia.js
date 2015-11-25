@@ -106,7 +106,10 @@ var Lumia = (function () {
 			target: screensaver,
 			direction: 'up',
 			callback: function (eventData) {
-				console.log('swiped')
+				TweenMax.to(screensaver, 1.0, {
+					y: '-100%',
+					ease: Power4.easeOut
+				});
 			}
 		});
 	};
