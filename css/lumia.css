@@ -73,6 +73,18 @@ footer {
 	user-select: none;
 }
 
+.-fill {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.-hidden {
+	opacity: 0;
+}
+
 
 
 /** Lumia main styles **/
@@ -199,13 +211,45 @@ footer {
 
 /** Main screen **/
 .lumia__main__screen {
-	background-color: #ccc;
+	background-color: #3c3c3c;
 	position: absolute;
 	top: 8%;
 	left: 3.5%;
 	width: 93%;
 	height: 82%;
 	overflow: hidden;
+}
+
+.lumia__power-on-screen {
+	background-color: #3c3c3c;
+}
+
+.lumia__power-on-screen__nokia__logo {
+	position: absolute;
+	width: 28%;
+	height: auto;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 1;
+}
+
+.lumia__power-on-screen__windows__logo {
+	position: absolute;
+	display: block;
+	font-size: 5em;
+	width: 100%;
+	height: 5em;
+	line-height: 5em;
+	text-align: center;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #00ADEF;
 }
 
 

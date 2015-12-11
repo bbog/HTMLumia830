@@ -7,13 +7,58 @@ var Lumia = (function () {
 
 	var screensaverTimeInterval;
 	function init () {
+
+		powerOnScreen();
 		
 		initScreensaver();
 		screensaverTimeInterval = setInterval(function () {
 			initScreensaver();
 		}, 60000);
-
 	};
+
+
+	/** Power on **/
+	function powerOnScreen() {
+
+		showFirstBootScreen();
+	};
+
+
+	function showFirstBootScreen (firstBootScreen) {
+
+		var firstBootScreen  = document.getElementById('power-on-first-screen');
+
+		TweenMax.to(firstBootScreen, 0.5, {
+			opacity: 0,
+			delay: 1,
+			onComplete: showSecondBootScreen
+		});
+	};
+
+
+	function showSecondBootScreen (secondBootScreen) {
+
+		var secondBootScreen = document.getElementById('power-on-second-screen');
+
+		TweenMax.to(secondBootScreen, 0.5, {
+			opacity: 1,
+			onComplete: hideBootScreen
+		});
+	};
+
+
+	function hideBootScreen (bootScreen) {
+
+		var bootScreen = document.getElementById('power-on-screen');
+
+		TweenMax.to(bootScreen, 0.2, {
+			opacity: 0,
+			delay: 1,
+			onComplete: function () {
+				bootScreen.style.display = 'none';
+			}
+		});
+	}
 
 
 	/** Screensaver **/	
